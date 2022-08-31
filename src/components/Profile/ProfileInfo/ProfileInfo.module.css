@@ -1,0 +1,11 @@
+.self {
+	display: flex;
+	gap: 20px;
+}
+
+.avatar {
+	font-size: 3rem;
+}
+
+.description {
+}
