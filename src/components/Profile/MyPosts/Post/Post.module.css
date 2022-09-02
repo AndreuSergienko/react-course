@@ -1,14 +1,20 @@
 .post {
-   display: flex;
-   gap: 10px;
-   margin-top: 50px;
+	display: flex;
+	gap: 10px;
+	margin-top: 50px;
 }
 
 .post img {
-   max-width: 70px;
-   width: 100%;
+	max-width: 70px;
+	width: 100%;
 }
 
 .post p {
-   font-size: 1.9rem;
+	font-size: 1.9rem;
+}
+
+.description {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
 }

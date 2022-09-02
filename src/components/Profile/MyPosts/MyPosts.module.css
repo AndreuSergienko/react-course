@@ -14,12 +14,18 @@
 }
 
 .input {
-	background: #d29b87;
-	color: #fff;
+	border-radius: 10px;
+	background: #eee;
+	color: #000;
 	flex: 1 1 40px;
 	font-size: 2rem;
 	border: none;
 	padding: 10px 100px 15px 10px;
+	transition: 0.3s;
+}
+
+.input:focus {
+	box-shadow: 1px 1px 20px #ccc;
 }
 
 .input::placeholder {
