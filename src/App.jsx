@@ -9,13 +9,13 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App(props) {
 	return (
 		<BrowserRouter>
-			<div className="layout">
+			<div className='layout'>
 				<Header />
 				<Sidebar />
-				<div className="content-wrapper">
+				<div className='content-wrapper'>
 					<Routes>
 						<Route
-							path="/profile"
+							path='/profile'
 							element={
 								<Profile
 									profilePage={props.state.profilePage}
@@ -24,7 +24,7 @@ function App(props) {
 							}
 						/>
 						<Route
-							path="/dialogs"
+							path='/dialogs'
 							element={<Dialogs state={props.state.dialogsPage} />}
 						/>
 					</Routes>

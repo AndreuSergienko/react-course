@@ -1,4 +1,5 @@
 import React from 'react';
+import { ActionCreator } from '../../../redux/store';
 import myposts from './MyPosts.module.css';
 import Post from './Post/Post';
 
@@ -6,17 +7,12 @@ const MyPosts = (props) => {
 	let newPost = React.createRef();
 
 	const createNewPost = () => {
-		props.dispatch({
-			type: 'ADD-POST',
-		});
+		props.dispatch(ActionCreator('ADD-POST'));
 	};
 
 	const onPostChange = () => {
 		let postMessage = newPost.current.value;
-		props.dispatch({
-			type: 'CHANGE-NEW-POST-TEXT',
-			message: postMessage,
-		});
+		props.dispatch(ActionCreator('CHANGE-NEW-POST-TEXT', postMessage));
 	};
 
 	return (
@@ -24,15 +20,15 @@ const MyPosts = (props) => {
 			<h3 className={myposts.title}>My posts</h3>
 			<form className={myposts.form}>
 				<input
-					type="text"
-					placeholder="your news..."
+					type='text'
+					placeholder='your news...'
 					className={myposts.input}
 					ref={newPost}
 					value={props.newPostText}
 					onChange={onPostChange}
 				/>
 				<button
-					type="button"
+					type='button'
 					onClick={createNewPost}
 					className={myposts.btnSend}
 				>
