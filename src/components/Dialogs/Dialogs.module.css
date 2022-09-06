@@ -18,3 +18,38 @@
 
 .messages {
 }
+
+.textarea {
+	padding: 10px 100px 10px 10px;
+	width: 100%;
+	min-height: 50px;
+	outline: none;
+	border: none;
+	display: block;
+	margin-top: 30px;
+	transition: 0.3s;
+	font-size: 20px;
+}
+
+.textarea:focus {
+	box-shadow: 1px 1px 20px #ccc;
+}
+
+.button {
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	outline: none;
+	border: none;
+	background: aquamarine;
+	font-size: 20px;
+	border-radius: 20px;
+	padding: 20px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.button:hover {
+	background: rgb(114, 231, 192);
+}

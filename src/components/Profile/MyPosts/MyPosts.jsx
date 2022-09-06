@@ -1,5 +1,5 @@
 import React from 'react';
-import { ActionCreator } from '../../../redux/store';
+import { newPostCreator } from '../../../redux/store';
 import myposts from './MyPosts.module.css';
 import Post from './Post/Post';
 
@@ -7,12 +7,12 @@ const MyPosts = (props) => {
 	let newPost = React.createRef();
 
 	const createNewPost = () => {
-		props.dispatch(ActionCreator('ADD-POST'));
+		props.dispatch(newPostCreator('ADD_POST'));
 	};
 
 	const onPostChange = () => {
 		let postMessage = newPost.current.value;
-		props.dispatch(ActionCreator('CHANGE-NEW-POST-TEXT', postMessage));
+		props.dispatch(newPostCreator('CHANGE_NEW_POST_TEXT', postMessage));
 	};
 
 	return (
