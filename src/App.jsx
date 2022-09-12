@@ -29,7 +29,7 @@ function App(props) {
 								<Dialogs
 									dialogsPage={props.state.dialogsPage}
 									dispatch={props.dispatch}
-								 />
+								/>
 							}
 						/>
 					</Routes>

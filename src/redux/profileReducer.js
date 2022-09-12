@@ -1,4 +1,13 @@
-const profileReducer = (state, action) => {
+let initialState = {
+   postsData: [
+      { id: 1, post: 'Hello, im from post 1', likes: 10 },
+      { id: 2, post: 'Yeah, but im from the second one', likes: 13 },
+      { id: 3, post: 'Did you forget bout me? Im three', likes: 7 },
+   ],
+   newPostText: 'it-kamasutra.com',
+}
+
+const profileReducer = (state = initialState, action) => {
 
    switch (action.type) {
       case 'ADD_POST':
