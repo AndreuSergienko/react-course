@@ -1,19 +1,18 @@
-import React from 'react';
-import myposts from './MyPosts.module.css';
-import Post from './Post/Post';
-import { newPostCreator } from '../../../redux/profileReducer';
+import React from 'react'
+import myposts from './MyPosts.module.css'
+import Post from './Post/Post'
 
 const MyPosts = (props) => {
-	let newPost = React.createRef();
+	let newPost = React.createRef()
 
 	const createNewPost = () => {
-		props.dispatch(newPostCreator('ADD_POST'));
-	};
+		props.addPost()
+	}
 
 	const onPostChange = () => {
-		let postMessage = newPost.current.value;
-		props.dispatch(newPostCreator('CHANGE_NEW_POST_TEXT', postMessage));
-	};
+		let postMessage = newPost.current.value
+		props.updatePostMessage(postMessage)
+	}
 
 	return (
 		<div className={myposts.postsWrapper}>
@@ -37,11 +36,11 @@ const MyPosts = (props) => {
 			</form>
 			<div className={myposts.posts}>
 				{props.posts.map((post) => {
-					return <Post post={post.post} likes={post.likes} />;
+					return <Post post={post.post} likes={post.likes} />
 				})}
 			</div>
 		</div>
-	);
-};
+	)
+}
 
-export default MyPosts;
+export default MyPosts

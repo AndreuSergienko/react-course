@@ -1,9 +1,9 @@
-import React from 'react';
-import profile from './Profile.module.css';
-import MyPosts from './MyPosts/MyPosts';
-import ProfileInfo from './ProfileInfo/ProfileInfo';
+import React from 'react'
+import profile from './Profile.module.css'
+import MyPostsContainer from './MyPosts/MyPostsContainer'
+import ProfileInfo from './ProfileInfo/ProfileInfo'
 
-const Profile = (props) => {
+const Profile = () => {
 	return (
 		<div className={profile.profile}>
 			<div className={profile.img}>
@@ -13,13 +13,9 @@ const Profile = (props) => {
 				/>
 			</div>
 			<ProfileInfo />
-			<MyPosts
-				posts={props.profilePage.postsData}
-				dispatch={props.dispatch}
-				newPostText={props.profilePage.newPostText}
-			/>
+			<MyPostsContainer />
 		</div>
-	);
-};
+	)
+}
 
-export default Profile;
+export default Profile
